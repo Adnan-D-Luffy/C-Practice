@@ -4,7 +4,7 @@
 int main () {
     // Bool contains true or false
     bool a = true;
-    bool b = false ;
+    bool b = false || 0;
 
     printf("%d \n" ,b);
     if (a) {

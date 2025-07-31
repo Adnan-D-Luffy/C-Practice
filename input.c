@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int main () {
 
@@ -10,11 +11,13 @@ int main () {
 
     //skip \n from new line buffer
     getchar(); // it reads stdin;
-    printf("Enter your full name ?");
+    printf("Enter your full name ?\n");
 
     fgets(name, sizeof(name), stdin);
-    printf("Oh You are %s", name);
+    name[strlen(name)-1] = '\0';
+    //removing the buffer
+    printf("Oh You are %s \n", name);
 
-
+    printf("So hello");
     return 0;
 }

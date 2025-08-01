@@ -3,21 +3,16 @@
 
 int main () {
 
-    int age;
-    char name[30];
-    printf("What's your age? ");
-    scanf("%d",&age);
-    printf("Oh you are %d years old \n",age);
 
-    //skip \n from new line buffer
-    getchar(); // it reads stdin;
-    printf("Enter your full name ?\n");
-
-    fgets(name, sizeof(name), stdin);
+    int age ;
+    char name[30] ;
+   
+    printf("What's your name ? :- ");
+    fgets(name, sizeof(name), stdin); // getchar();
     name[strlen(name)-1] = '\0';
-    //removing the buffer
-    printf("Oh You are %s \n", name);
-
-    printf("So hello");
-    return 0;
+    printf("So your name is %s \n",name);
+    printf("So how old are you ? :-");
+    scanf("%d",&age);
+     printf("So you are %d years old",age);
+    return 0 ;
 }
